@@ -24,7 +24,6 @@ func getRepositories(name string) ([]*github.Repository, error) {
 
 	switch {
 	case *flOrg:
-		log.Println("lalala")
 		opts := &github.RepositoryListByOrgOptions{Type: "public"}
 		repos, _, err = ghClient.Repositories.ListByOrg(name, opts)
 		if err != nil {
